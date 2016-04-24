@@ -6,7 +6,7 @@ This set of scripts builds, from scratch and on Linux, the binary of a setup EXE
 Those scripts have been developed and tested on Ubuntu 15.10 and Ubuntu 16.04.
 
 The Libav application and associated libraries are generated in both 32 and 64 bits versions. The created unique setup file takes care of installing the appropriate version depending on the 
-target platform. It has been tested on both Windows 32 bits and Windows 10.
+target platform. It has been tested on both Windows 32 bits and Windows 10 64 bits.
 
 In addition to Libav core code, the included libraries are:
 - libmp3lame
