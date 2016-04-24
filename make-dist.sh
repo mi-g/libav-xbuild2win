@@ -12,10 +12,10 @@ DISTDIR="$BASEDIR/dist"
 DISTDIRWIN=$(echo "$DISTDIR" | sed -e 's/\//\\\\/g')
 SRCDIR="$BASEDIR/src"
 
-VERSION=$(cat "$BASEDIR/VERSION")
-PRODUCT=$(cat "$BASEDIR/PRODUCT")
-BUILDER=$(cat "$BASEDIR/BUILDER")
-BUILDER_WEBSITE=$(cat "$BASEDIR/BUILDER_WEBSITE")
+VERSION=$(cat "$BASEDIR/templates/VERSION")
+PRODUCT=$(cat "$BASEDIR/templates/PRODUCT")
+BUILDER=$(cat "$BASEDIR/templates/BUILDER")
+BUILDER_WEBSITE=$(cat "$BASEDIR/templates/BUILDER_WEBSITE")
 
 echo "TMPDIR $TMPDIR $TMPDIRWIN"
 echo "BUILDDIR $BUILDDIR $BUILDDIRWIN"
@@ -28,7 +28,7 @@ mkdir -p "$DISTDIR"
 
 resolve() {
 	FILE="$1"
-	cat "$BASEDIR/$FILE" | \
+	cat "$BASEDIR/templates/$FILE" | \
 		sed -e "s/{{VERSION}}/$VERSION/g" |\
 		sed -e "s/{{PRODUCT}}/$PRODUCT/g" |\
 		sed -e "s/{{BUILDER}}/$BUILDER/g" |\
