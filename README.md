@@ -30,6 +30,8 @@ In addition to Libav core code, the included libraries are:
 - openssl
 - librtmp
 
+You'll need at least 5GB of free disk space when running the project scripts.
+
 get-sources.sh
 --------------
 
