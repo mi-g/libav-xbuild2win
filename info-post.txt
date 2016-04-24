@@ -1,0 +1,1 @@
+Congratulations, you just installed {{PRODUCT}}-{{VERSION}} generated from with libav-xbuild2win (https://github.com/mi-g/libav-xbuild2win)
